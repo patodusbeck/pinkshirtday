@@ -2,6 +2,7 @@
 =====================================================
 PINK SHIRT DAY
 Design moderno + glassmorphism
+Responsivo + Dark Mode corrigido
 =====================================================
 */
 
@@ -18,12 +19,18 @@ Design moderno + glassmorphism
 
   --card: rgba(255,255,255,0.68);
 
+  /* SUPERFÍCIES */
+  --surface: #ffffff;
+  --surface-hover: #fff4f8;
+
   --shadow:
     0 15px 45px rgba(0,0,0,0.08);
 
 }
 
-/* DARK MODE */
+/* =====================================================
+DARK MODE
+===================================================== */
 
 body.dark {
 
@@ -36,14 +43,25 @@ body.dark {
   --text: #ffffff;
   --softText: #c9b1bf;
 
-  --card: rgba(32,32,32,0.7);
+  --card: rgba(32,32,32,0.72);
+
+  --surface: #2a1d27;
+  --surface-hover: #372432;
 
 }
+
+/* =====================================================
+RESET
+===================================================== */
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -66,22 +84,31 @@ body{
   justify-content:center;
 
   overflow-x:hidden;
+
   padding:20px;
 
-  transition:0.4s;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
 }
 
-/* Container */
+/* =====================================================
+CONTAINER
+===================================================== */
 
 .quiz-container{
 
   width:100%;
   max-width:760px;
+
   position:relative;
+
   z-index:2;
 }
 
-/* Partículas */
+/* =====================================================
+PARTÍCULAS
+===================================================== */
 
 .particles::before,
 .particles::after{
@@ -96,9 +123,12 @@ body{
   border-radius:50%;
 
   background:
-    rgba(255,255,255,0.2);
+    rgba(255,255,255,0.15);
 
-  animation:float 10s infinite ease-in-out;
+  animation:
+    float 10s infinite ease-in-out;
+
+  z-index:0;
 }
 
 .particles::before{
@@ -112,18 +142,9 @@ body{
   animation-delay:3s;
 }
 
-@keyframes float{
-
-  0%,100%{
-    transform:translateY(0);
-  }
-
-  50%{
-    transform:translateY(30px);
-  }
-}
-
-/* Blur */
+/* =====================================================
+BLUR BACKGROUND
+===================================================== */
 
 .background-blur{
 
@@ -153,7 +174,9 @@ body{
   left:-150px;
 }
 
-/* Theme */
+/* =====================================================
+THEME BUTTON
+===================================================== */
 
 .theme-toggle{
 
@@ -166,28 +189,33 @@ body{
   height:55px;
 
   border:none;
+
   border-radius:50%;
 
-  background:white;
+  background:var(--surface);
+
+  color:var(--primary);
 
   cursor:pointer;
 
-  z-index:10;
-
-  color:#ff4f93;
+  z-index:20;
 
   font-size:18px;
 
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.12);
 
   transition:0.3s;
 }
 
 .theme-toggle:hover{
+
   transform:scale(1.05);
 }
 
-/* Start */
+/* =====================================================
+START SCREEN
+===================================================== */
 
 .start-screen{
 
@@ -196,43 +224,15 @@ body{
   animation:fadeUp 0.8s ease;
 }
 
-.icon-circle{
-
-  width:90px;
-  height:90px;
-
-  border-radius:50%;
-
-  background:white;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  margin:auto;
-  margin-bottom:25px;
-
-  box-shadow:0 10px 30px rgba(255,105,180,0.2);
-}
-
-.icon-circle.big{
-
-  width:110px;
-  height:110px;
-}
-
-.icon-circle i{
-
-  font-size:40px;
-  color:var(--primary);
-}
-
 .start-screen h1,
 .hero h1{
 
-  font-size:clamp(2rem,6vw,3.2rem);
+  font-size:
+    clamp(2rem,6vw,3.2rem);
 
   margin-bottom:10px;
+
+  font-weight:700;
 }
 
 .start-screen p,
@@ -247,7 +247,46 @@ body{
   padding:0 10px;
 }
 
-/* Buttons */
+/* =====================================================
+ICONS
+===================================================== */
+
+.icon-circle{
+
+  width:90px;
+  height:90px;
+
+  border-radius:50%;
+
+  background:var(--surface);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:auto;
+  margin-bottom:25px;
+
+  box-shadow:
+    0 10px 30px rgba(255,105,180,0.2);
+}
+
+.icon-circle.big{
+
+  width:110px;
+  height:110px;
+}
+
+.icon-circle i{
+
+  font-size:40px;
+
+  color:var(--primary);
+}
+
+/* =====================================================
+BUTTONS
+===================================================== */
 
 #start-btn,
 #next-btn,
@@ -285,13 +324,18 @@ body{
 #next-btn:hover,
 .result-card button:hover{
 
-  transform:translateY(-3px);
+  transform:
+    translateY(-3px);
 }
 
-/* Quiz */
+/* =====================================================
+QUIZ
+===================================================== */
 
 .hero{
+
   text-align:center;
+
   margin-bottom:25px;
 }
 
@@ -302,7 +346,8 @@ body{
 
   backdrop-filter:blur(15px);
 
-  border:1px solid rgba(255,255,255,0.4);
+  border:
+    1px solid rgba(255,255,255,0.25);
 
   padding:30px;
 
@@ -313,7 +358,9 @@ body{
   animation:fadeUp 0.6s ease;
 }
 
-/* Top */
+/* =====================================================
+TOP INFO
+===================================================== */
 
 .top-info{
 
@@ -323,20 +370,25 @@ body{
 
   gap:10px;
 
-  margin-bottom:20px;
-
   flex-wrap:wrap;
+
+  margin-bottom:20px;
 }
 
 .question-count{
 
   color:var(--softText);
+
   font-size:14px;
 }
 
+/* =====================================================
+TIMER
+===================================================== */
+
 .timer{
 
-  background:white;
+  background:var(--surface);
 
   padding:10px 15px;
 
@@ -353,7 +405,9 @@ body{
   font-weight:600;
 }
 
-/* Progress */
+/* =====================================================
+PROGRESS BAR
+===================================================== */
 
 .progress-container{
 
@@ -384,23 +438,29 @@ body{
   transition:0.4s;
 }
 
-/* Question */
+/* =====================================================
+QUESTION
+===================================================== */
 
 #question{
 
-  font-size:clamp(1.3rem,4vw,1.8rem);
+  font-size:
+    clamp(1.3rem,4vw,1.8rem);
 
   margin-bottom:25px;
 
   line-height:1.4;
 }
 
-/* Answers */
+/* =====================================================
+ANSWERS
+===================================================== */
 
 .answers{
 
   display:flex;
   flex-direction:column;
+
   gap:15px;
 }
 
@@ -408,7 +468,7 @@ body{
 
   border:none;
 
-  background:white;
+  background:var(--surface);
 
   padding:18px;
 
@@ -429,26 +489,35 @@ body{
 
 .answer-btn:hover{
 
-  transform:translateY(-2px);
+  transform:
+    translateY(-2px);
 
   border-color:var(--primary2);
 
-  background:#fff4f8;
+  background:var(--surface-hover);
 }
 
 .answer-btn.correct{
 
   background:#d7ffe5;
+
   border-color:#43c978;
+
+  color:#14532d;
 }
 
 .answer-btn.wrong{
 
   background:#ffe1e1;
+
   border-color:#ff5d5d;
+
+  color:#7f1d1d;
 }
 
-/* Result */
+/* =====================================================
+RESULT
+===================================================== */
 
 .result-card{
 
@@ -462,7 +531,7 @@ body{
 
   border-radius:50%;
 
-  background:white;
+  background:var(--surface);
 
   display:flex;
   align-items:center;
@@ -475,26 +544,37 @@ body{
 .result-icon i{
 
   font-size:45px;
+
   color:var(--primary);
 }
 
 .final-score{
 
   font-size:1.3rem;
+
   margin:20px 0;
+
+  font-weight:600;
 }
 
 .medal{
 
   margin-bottom:25px;
 
-  font-size:1.2rem;
-  font-weight:600;
+  font-size:1.1rem;
+
+  font-weight:500;
+
+  color:var(--softText);
 }
+
+/* =====================================================
+RANKING
+===================================================== */
 
 .ranking-box{
 
-  background:white;
+  background:var(--surface);
 
   padding:20px;
 
@@ -508,15 +588,25 @@ body{
   margin-bottom:10px;
 
   color:var(--primary);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
 }
 
-/* Utilities */
+/* =====================================================
+UTILS
+===================================================== */
 
 .hidden{
   display:none;
 }
 
-/* Animations */
+/* =====================================================
+ANIMATIONS
+===================================================== */
 
 @keyframes fadeUp{
 
@@ -531,7 +621,20 @@ body{
   }
 }
 
-/* RESPONSIVIDADE */
+@keyframes float{
+
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(30px);
+  }
+}
+
+/* =====================================================
+RESPONSIVIDADE TABLET
+===================================================== */
 
 @media(max-width:768px){
 
@@ -541,66 +644,148 @@ body{
 
   .quiz-card,
   .result-card{
+
     padding:22px;
+
     border-radius:24px;
   }
 
   .icon-circle{
+
     width:80px;
     height:80px;
   }
 
   .icon-circle.big{
+
     width:95px;
     height:95px;
   }
 
   .icon-circle i{
+
     font-size:34px;
   }
 
   #question{
+
     font-size:1.35rem;
   }
 
   .answer-btn{
+
     padding:16px;
+
     font-size:0.95rem;
+  }
+
+  .theme-toggle{
+
+    width:50px;
+    height:50px;
   }
 
 }
 
+/* =====================================================
+RESPONSIVIDADE MOBILE
+===================================================== */
+
 @media(max-width:480px){
 
   body{
+
     padding:12px;
   }
 
   .quiz-card,
   .result-card{
+
     padding:18px;
+
     border-radius:22px;
   }
 
   .top-info{
+
     flex-direction:column;
+
     align-items:flex-start;
   }
 
   .timer{
+
     width:100%;
+
     justify-content:center;
   }
 
   #start-btn,
   #next-btn,
   .result-card button{
+
     padding:16px;
+
+    font-size:0.95rem;
   }
 
   .answer-btn{
+
     font-size:0.92rem;
+
     line-height:1.4;
+  }
+
+  .question-count{
+
+    font-size:13px;
+  }
+
+  .ranking-box{
+
+    padding:16px;
+  }
+
+  .final-score{
+
+    font-size:1.1rem;
+  }
+
+}
+
+/* =====================================================
+TELAS MUITO PEQUENAS
+===================================================== */
+
+@media(max-width:360px){
+
+  .quiz-card,
+  .result-card{
+
+    padding:15px;
+  }
+
+  #question{
+
+    font-size:1.2rem;
+  }
+
+  .answer-btn{
+
+    padding:14px;
+
+    font-size:0.88rem;
+  }
+
+  .icon-circle{
+
+    width:70px;
+    height:70px;
+  }
+
+  .icon-circle i{
+
+    font-size:28px;
   }
 
 }
