@@ -85,9 +85,9 @@ const questions = [
   {
     question:"Empatia significa:",
     answers:[
-      {text:"Entender sentimentos do outro",correct:true},
       {text:"Ignorar pessoas",correct:false},
       {text:"Competir sempre",correct:false},
+      {text:"Entender sentimentos do outro",correct:true},
       {text:"Falar apenas de si",correct:false},
     ]
   },
@@ -95,10 +95,10 @@ const questions = [
   {
     question:"Cyberbullying acontece:",
     answers:[
-      {text:"Na internet",correct:true},
       {text:"No trânsito",correct:false},
       {text:"Somente em jogos",correct:false},
       {text:"Na televisão",correct:false},
+      {text:"Na internet",correct:true},
     ]
   },
 
@@ -115,9 +115,9 @@ const questions = [
   {
     question:"Bullying pode causar:",
     answers:[
-      {text:"Ansiedade",correct:true},
       {text:"Somente felicidade",correct:false},
       {text:"Nada",correct:false},
+      {text:"Ansiedade",correct:true},
       {text:"Diversão saudável",correct:false},
     ]
   },
@@ -125,18 +125,18 @@ const questions = [
   {
     question:"Uma atitude correta é:",
     answers:[
-      {text:"Ajudar a vítima",correct:true},
       {text:"Filmar bullying",correct:false},
       {text:"Rir da situação",correct:false},
       {text:"Ignorar sempre",correct:false},
+      {text:"Ajudar a vítima",correct:true},
     ]
   },
 
   {
     question:"A inclusão:",
     answers:[
-      {text:"Une pessoas",correct:true},
       {text:"Gera exclusão",correct:false},
+      {text:"Une pessoas",correct:true},
       {text:"Cria preconceito",correct:false},
       {text:"Afasta amizades",correct:false},
     ]
@@ -155,9 +155,9 @@ const questions = [
   {
     question:"Gentileza pode:",
     answers:[
-      {text:"Criar ambientes positivos",correct:true},
       {text:"Gerar medo",correct:false},
       {text:"Criar brigas",correct:false},
+      {text:"Criar ambientes positivos",correct:true},
       {text:"Separar pessoas",correct:false},
     ]
   },
@@ -165,9 +165,9 @@ const questions = [
   {
     question:"Bullying verbal inclui:",
     answers:[
-      {text:"Insultos ofensivos",correct:true},
       {text:"Elogios",correct:false},
       {text:"Ajuda",correct:false},
+      {text:"Insultos ofensivos",correct:true},
       {text:"Conselhos",correct:false},
     ]
   },
@@ -175,8 +175,8 @@ const questions = [
   {
     question:"Uma escola saudável deve:",
     answers:[
-      {text:"Promover respeito",correct:true},
       {text:"Aceitar bullying",correct:false},
+      {text:"Promover respeito",correct:true},
       {text:"Punir vítimas",correct:false},
       {text:"Criar exclusão",correct:false},
     ]
@@ -195,8 +195,8 @@ const questions = [
   {
     question:"O apoio dos amigos:",
     answers:[
-      {text:"Fortalece emocionalmente",correct:true},
       {text:"Não ajuda",correct:false},
+      {text:"Fortalece emocionalmente",correct:true},
       {text:"Aumenta medo",correct:false},
       {text:"Piora relações",correct:false},
     ]
@@ -205,19 +205,19 @@ const questions = [
   {
     question:"Pink Shirt Day promove:",
     answers:[
-      {text:"Respeito e inclusão",correct:true},
       {text:"Competição extrema",correct:false},
       {text:"Exclusão social",correct:false},
       {text:"Violência",correct:false},
+      {text:"Respeito e inclusão",correct:true},
     ]
   },
 
   {
     question:"Combater bullying significa:",
     answers:[
-      {text:"Criar ambientes seguros",correct:true},
       {text:"Espalhar ofensas",correct:false},
       {text:"Excluir colegas",correct:false},
+      {text:"Criar ambientes seguros",correct:true},
       {text:"Incentivar medo",correct:false},
     ]
   }
