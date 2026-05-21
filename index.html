@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pink Shirt Day Quiz</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Partículas -->
+  <div class="particles"></div>
+
+  <!-- Blur decorativo -->
+  <div class="background-blur blur-1"></div>
+  <div class="background-blur blur-2"></div>
+
+  <!-- Botão Dark Mode -->
+  <button class="theme-toggle" id="theme-toggle">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <main class="quiz-container">
+
+    <!-- TELA INICIAL -->
+    <section class="start-screen" id="start-screen">
+
+      <div class="icon-circle big">
+        <i class="fa-solid fa-shirt"></i>
+      </div>
+
+      <h1>Pink Shirt Day</h1>
+
+      <p>
+        Um quiz interativo sobre respeito,
+        empatia e combate ao bullying.
+      </p>
+
+      <div class="start-buttons">
+
+        <button id="start-btn">
+          <i class="fa-solid fa-play"></i>
+          Iniciar Quiz
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- QUIZ -->
+    <section class="quiz-content hidden" id="quiz-content">
+
+      <!-- Header -->
+      <section class="hero">
+
+        <div class="icon-circle">
+          <i class="fa-solid fa-shirt"></i>
+        </div>
+
+        <h1>Pink Shirt Day</h1>
+
+        <p>
+          Respeito, empatia e inclusão.
+        </p>
+
+      </section>
+
+      <!-- CARD -->
+      <section class="quiz-card">
+
+        <!-- Topo -->
+        <div class="top-info">
+
+          <div class="question-count" id="question-count">
+            Questão 1 de 15
+          </div>
+
+          <div class="timer" id="timer">
+            <i class="fa-regular fa-clock"></i>
+            <span id="timer-text">20</span>s
+          </div>
+
+        </div>
+
+        <!-- Barra -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Pergunta -->
+        <h2 id="question"></h2>
+
+        <!-- Alternativas -->
+        <div class="answers" id="answers"></div>
+
+        <!-- Próxima -->
+        <button id="next-btn">
+          Próxima
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+      </section>
+
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="result-card hidden" id="result-card">
+
+      <div class="result-icon">
+        <i class="fa-solid fa-award"></i>
+      </div>
+
+      <h2>Quiz Finalizado!</h2>
+
+      <div class="final-score" id="score-text"></div>
+
+      <!-- Medalha -->
+      <div class="medal" id="medal"></div>
+
+      <!-- Ranking -->
+      <div class="ranking-box">
+
+        <h3>
+          <i class="fa-solid fa-trophy"></i>
+          Melhor Pontuação
+        </h3>
+
+        <p id="best-score"></p>
+
+      </div>
+
+      <button onclick="location.reload()">
+        Refazer Quiz
+      </button>
+
+    </section>
+
+  </main>
+
+  <!-- Áudio -->
+  <audio id="click-sound"
+    src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8c8a73467.mp3"></audio>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
